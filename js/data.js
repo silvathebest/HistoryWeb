@@ -3,8 +3,9 @@ const coordinateY = ['57%', "6%", "50%"]
 const size = [64, 125, 350]
 const opacity = [0.8, 0.85, 0.9]
 
+let pictures = []
+
 const fillPictures = () => {
-    let pictures = []
     for (let i = 1; i <= 10; i++) {
         pictures.push({
             background: i + '.jpg',
@@ -16,7 +17,7 @@ const fillPictures = () => {
             opacity: opacity[i - 1],
         })
     }
-    pictures[0].foreground.push('01.png')
-    return pictures
 }
+
+fillPictures()
 

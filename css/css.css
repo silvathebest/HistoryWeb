@@ -26,6 +26,13 @@
     opacity: 80%;
 }
 
+.foreground2 {
+    position: absolute;
+    left: 78%;
+    top: 12%;
+    opacity: 90%;
+}
+
 .isFinded {
     box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
     animation: pulsing 2s infinite;
