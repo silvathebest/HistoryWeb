@@ -1,0 +1,50 @@
+[
+  {
+    "background": "1.jpg",
+    "imagesCount": 1,
+    "foreground": {
+      "src": "1.png",
+      "coordinate": {
+        "x": "43.5%",
+        "y": "57%"
+      },
+      "size": 64,
+      "opacity": 0.8
+    }
+  },
+  {
+    "background": "2.jpg",
+    "imagesCount": 2,
+    "foreground": {
+      "src": "2.png",
+      "coordinate": {
+        "x": "40%",
+        "y": "6%"
+      },
+      "size": 125,
+      "opacity": 0.85
+    },
+    "foreground2": {
+      "src": "01.png",
+      "coordinate": {
+        "x": "78%",
+        "y": "12%"
+      },
+      "size": 64,
+      "opacity": 0.9
+    }
+  },
+  {
+    "background": "3.jpg",
+    "imagesCount": 1,
+    "foreground": {
+      "src": "3.png",
+      "coordinate": {
+        "x": "25%",
+        "y": "50%"
+      },
+      "size": 350,
+      "opacity": 0.9
+    }
+  }
+]

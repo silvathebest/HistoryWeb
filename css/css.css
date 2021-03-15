@@ -3,8 +3,9 @@
     padding: 0;
 }
 
-.container {
+.container_main {
     min-width: max-content;
+    display: flex;
 }
 
 .background {
@@ -19,6 +20,11 @@
     height: 720px;
 }
 
+#background_description {
+    float: right;
+    font-weight: 500;
+}
+
 .foreground {
     position: absolute;
     left: 43.5%;
@@ -28,9 +34,6 @@
 
 .foreground2 {
     position: absolute;
-    left: 78%;
-    top: 12%;
-    opacity: 90%;
 }
 
 .isFinded {
@@ -40,6 +43,19 @@
 
 .foreground > img {
     display: block;
+}
+
+.btn_block {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.score_wrapper {
+    width: 100%;
+    font-size: 20px;
+    margin: 20px;
 }
 
 @keyframes pulsing {

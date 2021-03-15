@@ -1,16 +1,24 @@
 const btnNext = document.getElementById('btnNext')
 const btnPrev = document.getElementById('btnPrev')
+const btnRestart = document.getElementById('btnRestart')
+
 const backgroundIMG = document.getElementById('backgroundIMG')
 const foregroundIMG = document.getElementById('foregroundIMG')
 const foregroundIMG2 = document.getElementById('foregroundIMG2')
+
 const numberAllPic = 3;
 
 let currentPic = 1;
+let pictures = []
+
+fetch('data.json').then(res => res.json()).then(json => pictures = json)
+
 
 btnNext.addEventListener('click', () => {
     if (currentPic >= numberAllPic) return
 
     currentPic++
+    resetProgress()
     rerenderPic()
 })
 
@@ -18,36 +26,72 @@ btnPrev.addEventListener('click', () => {
     if (currentPic <= 1) return
 
     currentPic--
+    resetProgress()
+    rerenderPic()
+})
+
+btnRestart.addEventListener('click', () => {
+    if (currentPic === 1) return
+
+    currentPic = 1
+    resetProgress()
     rerenderPic()
 })
 
 const rerenderPic = () => {
-    foregroundIMG.style.visibility = 'hidden'
-    foregroundIMG2.style.visibility = 'hidden'
-    backgroundIMG.style.visibility = 'hidden'
+    enableDisablePic('hidden')
 
     changePicProperty(currentPic)
 
     setTimeout(() => {
-        foregroundIMG.style.visibility = 'visible'
-        foregroundIMG2.style.visibility = 'visible'
-        backgroundIMG.style.visibility = 'visible'
+        enableDisablePic('visible')
     }, 50)
 }
 
+const enableDisablePic = (visibility) => {
+    foregroundIMG.style.visibility = visibility
+    foregroundIMG2.style.visibility = visibility
+    backgroundIMG.style.visibility = visibility
+}
+
 const changePicProperty = (current) => {
+
+    const currentItem = pictures[current - 1]
 
     if (foregroundIMG.classList.contains('isFinded')) {
         foregroundIMG.classList.remove('isFinded')
         countClick++
     }
 
-    foreground.style.left = pictures[current - 1].coordinate.x
-    foreground.style.top = pictures[current - 1].coordinate.y
-    foreground.style.opacity = pictures[current - 1].opacity
-    foregroundIMG.style.width = pictures[current - 1].size + 'px'
+    if (foregroundIMG2.classList.contains('isFinded')) {
+        foregroundIMG2.classList.remove('isFinded')
+        countClick2++
+    }
 
     backgroundIMG.src = './img/' + current + '.jpg'
+
+    foreground.style.left = currentItem.foreground.coordinate.x
+    foreground.style.top = currentItem.foreground.coordinate.y
+    foreground.style.opacity = currentItem.foreground.opacity
+    foregroundIMG.style.width = currentItem.foreground.size + 'px'
     foregroundIMG.src = './img/' + current + '.png'
+
+
+    if (currentItem.foreground2) {
+        foreground2.style.left = currentItem.foreground2.coordinate.x
+        foreground2.style.top = currentItem.foreground2.coordinate.y
+        foreground2.style.opacity = currentItem.foreground2.opacity
+        foregroundIMG2.style.width = currentItem.foreground2.size + 'px'
+
+        foregroundIMG2.src = './img/' + currentItem.foreground2.src
+    } else {
+        foregroundIMG2.src = ''
+    }
 }
 
+const resetProgress = () => {
+    isFinded2 = false
+    isFinded = false
+    findedItems = 0
+    scoreText.innerText = `Найдено лишних предметов ${findedItems} из ${pictures[currentPic - 1].imagesCount}`
+}

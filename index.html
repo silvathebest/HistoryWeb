@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Title</title>
 </head>
 <body>
-<div class="container">
-    <div class="background">
-        <img src="img/1.jpg" id="backgroundIMG" alt="">
-        <div class="foreground" id="foreground">
-            <img src="img/1.png" id="foregroundIMG" alt="">
+<div class="container_main">
+    <div class="main_page">
+        <div class="background">
+            <img class="img-thumbnail" src="img/1.jpg" id="backgroundIMG" alt="">
+            <div class="foreground" id="foreground">
+                <img src="img/1.png" id="foregroundIMG" alt="">
+            </div>
+            <div class="foreground2" id="foreground2">
+                <img src="" id="foregroundIMG2" alt="">
+            </div>
         </div>
-        <div class="foreground2" id="foreground2">
-            <img src="img/01.png" id="foregroundIMG2" alt="">
+        <p id="background_description">Описание картинки</p>
+        <div class="btn_block">
+            <button type="button" class="btn btn-outline-dark btn-lg" id="btnPrev"><<</button>
+            <button class="btn btn-outline-secondary btn-lg" id="btnRestart">Начать сначала</button>
+            <button type="button" class="btn btn-outline-dark btn-lg" id="btnNext">>></button>
         </div>
     </div>
-    <button id="btnPrev">Назад</button>
-    <button id="btnNext">Вперед</button>
+    <div class="score_wrapper">
+        <span id="score">Найдено лишних предметов 0 из 1</span>
+    </div>
 </div>
 <script src="js/foregroundClick.js"></script>
 <script src="js/buttons.js"></script>
-<script src="js/data.js"></script>
 </body>
 </html>
