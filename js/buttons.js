@@ -6,13 +6,17 @@ const foregroundIMG = document.getElementById('foregroundIMG')
 const foregroundIMG2 = document.getElementById('foregroundIMG2')
 
 const backgroundDescription = document.getElementById('backgroundDescription')
+const currentSlide = document.getElementById('currentSlide')
 
-const numberAllPic = 3;
+let numberAllPic = 0;
 
 let currentPic = 1;
 let pictures = []
 
-fetch('data.json').then(res => res.json()).then(json => pictures = json)
+fetch('data.json').then(res => res.json()).then(json => {
+    pictures = json;
+    numberAllPic = json.length
+})
 
 
 btnNext.addEventListener('click', () => {
@@ -89,4 +93,5 @@ const resetProgress = () => {
     isFinded = false
     findedItems = 0
     scoreText.innerText = `Найдено лишних предметов ${findedItems} из ${pictures[currentPic - 1].imagesCount}`
+    currentSlide.innerText = `Текущий слайд: ${currentPic}`
 }

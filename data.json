@@ -49,5 +49,33 @@
       "size": 350,
       "opacity": 0.9
     }
+  },
+  {
+    "background": "4.jpg",
+    "imagesCount": 1,
+    "description": "Описание картины 4",
+    "foreground": {
+      "src": "4.png",
+      "coordinate": {
+        "x": "10%",
+        "y": "-3%"
+      },
+      "size": 190,
+      "opacity": 1
+    }
+  },
+  {
+    "background": "5.jpg",
+    "imagesCount": 1,
+    "description": "Описание картины 5",
+    "foreground": {
+      "src": "5.png",
+      "coordinate": {
+        "x": "27%",
+        "y": "27%"
+      },
+      "size": 60,
+      "opacity": 1
+    }
   }
 ]
