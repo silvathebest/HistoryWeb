@@ -9,26 +9,24 @@
 </head>
 <body>
 <div class="container_main">
-    <div class="main_page">
-        <div class="background">
-            <img class="img-thumbnail" src="img/1.jpg" id="backgroundIMG" alt="">
-            <div class="foreground" id="foreground">
-                <img src="img/1.png" id="foregroundIMG" alt="">
-            </div>
-            <div class="foreground2" id="foreground2">
-                <img src="" id="foregroundIMG2" alt="">
-            </div>
+
+    <div class="background">
+        <img src="img/1.jpg" id="backgroundIMG" alt="">
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+        <div class="foreground" id="foreground">
+            <img src="img/1.png" id="foregroundIMG" alt="">
         </div>
-        <p id="background_description">Описание картинки</p>
-        <div class="btn_block">
-            <button type="button" class="btn btn-outline-dark btn-lg" id="btnPrev"><<</button>
-            <button class="btn btn-outline-secondary btn-lg" id="btnRestart">Начать сначала</button>
-            <button type="button" class="btn btn-outline-dark btn-lg" id="btnNext">>></button>
+        <div class="foreground2" id="foreground2">
+            <img src="" id="foregroundIMG2" alt="">
         </div>
     </div>
+
     <div class="score_wrapper">
         <span id="score">Найдено лишних предметов 0 из 1</span>
+        <div class="backgroundDescription"><p id="backgroundDescription">Описание картины 1</p></div>
     </div>
+
 </div>
 <script src="js/foregroundClick.js"></script>
 <script src="js/buttons.js"></script>

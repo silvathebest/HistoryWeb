@@ -2,6 +2,7 @@
   {
     "background": "1.jpg",
     "imagesCount": 1,
+    "description": "Описание картины 1",
     "foreground": {
       "src": "1.png",
       "coordinate": {
@@ -15,6 +16,7 @@
   {
     "background": "2.jpg",
     "imagesCount": 2,
+    "description": "Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2",
     "foreground": {
       "src": "2.png",
       "coordinate": {
@@ -37,6 +39,7 @@
   {
     "background": "3.jpg",
     "imagesCount": 1,
+    "description": "Описание картины 3",
     "foreground": {
       "src": "3.png",
       "coordinate": {

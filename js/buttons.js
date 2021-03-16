@@ -1,10 +1,11 @@
 const btnNext = document.getElementById('btnNext')
 const btnPrev = document.getElementById('btnPrev')
-const btnRestart = document.getElementById('btnRestart')
 
 const backgroundIMG = document.getElementById('backgroundIMG')
 const foregroundIMG = document.getElementById('foregroundIMG')
 const foregroundIMG2 = document.getElementById('foregroundIMG2')
+
+const backgroundDescription = document.getElementById('backgroundDescription')
 
 const numberAllPic = 3;
 
@@ -16,6 +17,7 @@ fetch('data.json').then(res => res.json()).then(json => pictures = json)
 
 btnNext.addEventListener('click', () => {
     if (currentPic >= numberAllPic) return
+    if (findedItems < pictures[currentPic - 1].imagesCount) return
 
     currentPic++
     resetProgress()
@@ -30,14 +32,6 @@ btnPrev.addEventListener('click', () => {
     rerenderPic()
 })
 
-btnRestart.addEventListener('click', () => {
-    if (currentPic === 1) return
-
-    currentPic = 1
-    resetProgress()
-    rerenderPic()
-})
-
 const rerenderPic = () => {
     enableDisablePic('hidden')
 
@@ -45,7 +39,7 @@ const rerenderPic = () => {
 
     setTimeout(() => {
         enableDisablePic('visible')
-    }, 50)
+    }, 100)
 }
 
 const enableDisablePic = (visibility) => {
@@ -69,6 +63,7 @@ const changePicProperty = (current) => {
     }
 
     backgroundIMG.src = './img/' + current + '.jpg'
+    backgroundDescription.textContent = currentItem.description
 
     foreground.style.left = currentItem.foreground.coordinate.x
     foreground.style.top = currentItem.foreground.coordinate.y
