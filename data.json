@@ -6,11 +6,11 @@
     "foreground": {
       "src": "1.png",
       "coordinate": {
-        "x": "43.5%",
+        "x": "44.5%",
         "y": "57%"
       },
       "size": 64,
-      "opacity": 0.8
+      "opacity": 0.7
     }
   },
   {
@@ -29,11 +29,11 @@
     "foreground2": {
       "src": "01.png",
       "coordinate": {
-        "x": "78%",
-        "y": "12%"
+        "x": "39%",
+        "y": "54%"
       },
-      "size": 64,
-      "opacity": 0.9
+      "size": 30,
+      "opacity": 0.3
     }
   },
   {
@@ -44,10 +44,10 @@
       "src": "3.png",
       "coordinate": {
         "x": "25%",
-        "y": "50%"
+        "y": "51%"
       },
-      "size": 350,
-      "opacity": 0.9
+      "size": 360,
+      "opacity": 0.5
     }
   },
   {
@@ -57,11 +57,11 @@
     "foreground": {
       "src": "4.png",
       "coordinate": {
-        "x": "10%",
-        "y": "-3%"
+        "x": "11%",
+        "y": "3%"
       },
-      "size": 190,
-      "opacity": 1
+      "size": 170,
+      "opacity": 0.9
     }
   },
   {
@@ -75,6 +75,76 @@
         "y": "27%"
       },
       "size": 60,
+      "opacity": 0.6
+    }
+  },
+  {
+    "background": "6.jpg",
+    "imagesCount": 1,
+    "description": "Описание картины 6",
+    "foreground": {
+      "src": "6.png",
+      "coordinate": {
+        "x": "55%",
+        "y": "15%"
+      },
+      "size": 35,
+      "opacity": 0.8
+    }
+  },
+  {
+    "background": "7.jpg",
+    "imagesCount": 1,
+    "description": "Описание картины 7",
+    "foreground": {
+      "src": "7.png",
+      "coordinate": {
+        "x": "49.1%",
+        "y": "66.2%"
+      },
+      "size": 35,
+      "opacity": 1
+    }
+  },
+  {
+    "background": "8.jpg",
+    "imagesCount": 1,
+    "description": "Описание картины 8",
+    "foreground": {
+      "src": "8.png",
+      "coordinate": {
+        "x": "30%",
+        "y": "20%"
+      },
+      "size": 200,
+      "opacity": 0.9
+    }
+  },
+  {
+    "background": "9.jpg",
+    "imagesCount": 1,
+    "description": "Конец XIX века",
+    "foreground": {
+      "src": "9.png",
+      "coordinate": {
+        "x": "20%",
+        "y": "60%"
+      },
+      "size": 130,
+      "opacity": 1
+    }
+  },
+  {
+    "background": "10.jpg",
+    "imagesCount": 1,
+    "description": "Царство древней Руси",
+    "foreground": {
+      "src": "10.png",
+      "coordinate": {
+        "x": "82%",
+        "y": "68%"
+      },
+      "size": 100,
       "opacity": 1
     }
   }
