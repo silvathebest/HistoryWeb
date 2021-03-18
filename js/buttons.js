@@ -1,3 +1,4 @@
+//TODO добавить вступление и логотип
 const btnNext = document.getElementById('btnNext')
 const btnPrev = document.getElementById('btnPrev')
 
@@ -66,14 +67,14 @@ const changePicProperty = (current) => {
         countClick2++
     }
 
-    backgroundIMG.src = './img/' + current + '.jpg'
+    backgroundIMG.src = './img/' + currentItem.background
     backgroundDescription.textContent = currentItem.description
 
     foreground.style.left = currentItem.foreground.coordinate.x
     foreground.style.top = currentItem.foreground.coordinate.y
     foreground.style.opacity = currentItem.foreground.opacity
     foregroundIMG.style.width = currentItem.foreground.size + 'px'
-    foregroundIMG.src = './img/' + current + '.png'
+    foregroundIMG.src = './img/' + currentItem.foreground.src
 
 
     if (currentItem.foreground2) {

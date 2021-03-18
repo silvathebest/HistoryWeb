@@ -51,20 +51,6 @@
     }
   },
   {
-    "background": "4.jpg",
-    "imagesCount": 1,
-    "description": "Описание картины 4",
-    "foreground": {
-      "src": "4.png",
-      "coordinate": {
-        "x": "11%",
-        "y": "3%"
-      },
-      "size": 170,
-      "opacity": 0.9
-    }
-  },
-  {
     "background": "5.jpg",
     "imagesCount": 1,
     "description": "Описание картины 5",
