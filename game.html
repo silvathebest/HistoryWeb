@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Игровое web-приложение по истории России "Найдите лишнее"</title>
+</head>
+<body>
+<div class="container_main">
+
+    <div class="background">
+        <img src="img/1.jpg" id="backgroundIMG" alt="">
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+        <div class="foreground" id="foreground">
+            <img src="img/1.png" id="foregroundIMG" alt="">
+        </div>
+        <div class="foreground2" id="foreground2">
+            <img src="" id="foregroundIMG2" alt="">
+        </div>
+    </div>
+
+    <div class="score_wrapper">
+        <p id="currentSlide">Текущий слайд: 1</p>
+        <span id="score">Найдено лишних предметов 0 из 1</span>
+        <div class="backgroundDescription"><p id="backgroundDescription">Описание картины 1</p></div>
+    </div>
+
+</div>
+<script src="js/foregroundClick.js"></script>
+<script src="js/buttons.js"></script>
+</body>
+</html>

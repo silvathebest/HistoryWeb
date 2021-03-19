@@ -1,35 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Игровое web-приложение по истории России "Найдите лишнее"</title>
+    <title>Добро пожаловать</title>
 </head>
 <body>
-<div class="container_main">
-
-    <div class="background">
-        <img src="img/1.jpg" id="backgroundIMG" alt="">
-        <div id="btnPrev"></div>
-        <div id="btnNext"></div>
-        <div class="foreground" id="foreground">
-            <img src="img/1.png" id="foregroundIMG" alt="">
+<header>
+    <h1>Добро пожаловать в увлекательное игровое web-приложение "Найдите лишнее"</h1>
+</header>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="img/about.png" class="card-img-top" alt="о программе">
+                <div class="card-body">
+                    <h5 class="card-title">О программе</h5>
+                    <ul>
+                        <li>Приложение разработанно с применением JavaScript HTML CSS</li>
+                        <li>Была использована библиотека bootstrap4</li>
+                        <li>Все сцены подобраны и отредактированы с помощью adobe Photoshop</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="foreground2" id="foreground2">
-            <img src="" id="foregroundIMG2" alt="">
+        <div class="col">
+            <div class="card">
+                <img src="img/instruction.png" class="card-img-top" alt="инструкция">
+                <div class="card-body">
+                    <h5 class="card-title">Инструкция</h5>
+                    <ul>
+                        <li>Найдите все лишние объекты</li>
+                        <li>Когда найдете - кликните по лишнему объекту левой кнопкой мыши</li>
+                        <li>
+                            После того как найдете все объекты, вы можете перейти на следующую сцену
+                            нажатием на левую кнопку мыши по свободному пространству на сцене
+                        </li>
+                        <li>Вы можете вернуться на прошлую сцену, нажатием на левую часть изображения</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="img/author.png" class="card-img-top" alt="авторы">
+                <div class="card-body">
+                    <h5 class="card-title">Авторы</h5>
+                    <ul>
+                        <li class="authors">Романов Алексей Андреевич</li>
+                        <li class="authors">Кянжин Сергей Олегович</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="score_wrapper">
-        <p id="currentSlide">Текущий слайд: 1</p>
-        <span id="score">Найдено лишних предметов 0 из 1</span>
-        <div class="backgroundDescription"><p id="backgroundDescription">Описание картины 1</p></div>
+    <div class="start">
+        <a id="btnStart" class="btn btn-lg btn-dark stretched-link" href="game.html">
+            Нажмите на любое место чтобы начать игру
+        </a>
     </div>
-
 </div>
-<script src="js/foregroundClick.js"></script>
-<script src="js/buttons.js"></script>
+
 </body>
 </html>
