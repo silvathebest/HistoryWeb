@@ -19,7 +19,7 @@ fetch('data.json').then(res => res.json()).then(json => {
 })
 
 const btnNextHandler = () => {
-    if (currentPic >= numberAllPic) return
+    if (currentPic >= numberAllPic) window.location.href = 'final.html'
     if (findedItems < pictures[currentPic - 1].imagesCount) return
 
     currentPic++
@@ -70,14 +70,14 @@ const changePicProperty = (current) => {
         countClick2++
     }
 
-    backgroundIMG.src = './img/' + currentItem.background
+    backgroundIMG.src = './img/backgrounds/' + currentItem.background
     backgroundDescription.textContent = currentItem.description
 
     foreground.style.left = currentItem.foreground.coordinate.x
     foreground.style.top = currentItem.foreground.coordinate.y
     foreground.style.opacity = currentItem.foreground.opacity
     foregroundIMG.style.width = currentItem.foreground.size + 'px'
-    foregroundIMG.src = './img/' + currentItem.foreground.src
+    foregroundIMG.src = './img/foregrounds/' + currentItem.foreground.src
 
 
     if (currentItem.foreground2) {
@@ -86,7 +86,7 @@ const changePicProperty = (current) => {
         foreground2.style.opacity = currentItem.foreground2.opacity
         foregroundIMG2.style.width = currentItem.foreground2.size + 'px'
 
-        foregroundIMG2.src = './img/' + currentItem.foreground2.src
+        foregroundIMG2.src = './img/foregrounds/' + currentItem.foreground2.src
     } else {
         foregroundIMG2.src = ''
     }
