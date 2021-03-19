@@ -1,4 +1,3 @@
-//TODO добавить вступление и логотип
 const btnNext = document.getElementById('btnNext')
 const btnPrev = document.getElementById('btnPrev')
 
@@ -19,23 +18,27 @@ fetch('data.json').then(res => res.json()).then(json => {
     numberAllPic = json.length
 })
 
-
-btnNext.addEventListener('click', () => {
+const btnNextHandler = () => {
     if (currentPic >= numberAllPic) return
     if (findedItems < pictures[currentPic - 1].imagesCount) return
 
     currentPic++
     resetProgress()
     rerenderPic()
-})
+}
 
-btnPrev.addEventListener('click', () => {
+const btnPrevHandler = () => {
     if (currentPic <= 1) return
 
     currentPic--
     resetProgress()
     rerenderPic()
-})
+}
+
+btnNext.addEventListener('click', btnNextHandler)
+
+btnPrev.addEventListener('click', btnPrevHandler)
+
 
 const rerenderPic = () => {
     enableDisablePic('hidden')

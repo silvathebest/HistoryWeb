@@ -23,7 +23,6 @@
 
 .backgroundDescription {
     width: 90%;
-    margin-top: 20%;
     font-weight: 500;
     border: 5px outset black;
     background: #e49b0f;
@@ -73,10 +72,16 @@
 }
 
 .score_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     font-size: 20px;
     margin-top: 20px;
     text-align: center;
+}
+
+.back-to-start {
 }
 
 

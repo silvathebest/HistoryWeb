@@ -2,7 +2,7 @@
   {
     "background": "1.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 1",
+    "description": "Смоленский рынок XIX века",
     "foreground": {
       "src": "1.png",
       "coordinate": {
@@ -16,7 +16,7 @@
   {
     "background": "2.jpg",
     "imagesCount": 2,
-    "description": "Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2Описание картины 2",
+    "description": "Договор между Союзом Советских Социалистических Республик и Французской Республикой о союзе и взаимной помощи (Москва, 10 декабря 1944 г.)",
     "foreground": {
       "src": "2.png",
       "coordinate": {
@@ -39,7 +39,7 @@
   {
     "background": "3.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 3",
+    "description": "Выступление Ленина перед войсками, направляющимися на польский фронт.",
     "foreground": {
       "src": "3.png",
       "coordinate": {
@@ -53,7 +53,7 @@
   {
     "background": "5.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 5",
+    "description": "Объявление о дне коронации Александра II на Красной площади.",
     "foreground": {
       "src": "5.png",
       "coordinate": {
@@ -67,7 +67,7 @@
   {
     "background": "6.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 6",
+    "description": "Последний царь всея Руси и первый Император Всероссийский.",
     "foreground": {
       "src": "6.png",
       "coordinate": {
@@ -81,7 +81,7 @@
   {
     "background": "7.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 7",
+    "description": "Ленин на елке в Сокольниках",
     "foreground": {
       "src": "7.png",
       "coordinate": {
@@ -95,7 +95,7 @@
   {
     "background": "8.jpg",
     "imagesCount": 1,
-    "description": "Описание картины 8",
+    "description": "Битва при Нарве. Одно из первых сражений Великой Северной войны между русской армией Петра I и шведской армией Карла XII, состоявшееся 30 ноября 1700 года у города Нарвы и окончившееся поражением русских войск.",
     "foreground": {
       "src": "8.png",
       "coordinate": {
@@ -109,7 +109,7 @@
   {
     "background": "9.jpg",
     "imagesCount": 1,
-    "description": "Конец XIX века",
+    "description": "Большой Москворецкий мост. Конец XIX века",
     "foreground": {
       "src": "9.png",
       "coordinate": {

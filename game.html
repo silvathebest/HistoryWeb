@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/game.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Игровое web-приложение по истории России "Найдите лишнее"</title>
 </head>
 <body>
@@ -21,11 +23,17 @@
     </div>
 
     <div class="score_wrapper">
-        <p id="currentSlide">Текущий слайд: 1</p>
-        <span id="score">Найдено лишних предметов 0 из 1</span>
-        <div class="backgroundDescription"><p id="backgroundDescription">Описание картины 1</p></div>
-    </div>
+        <div>
+            <p id="currentSlide">Текущая сцена: 1</p>
+            <span id="score">Найдено лишних объектов 0 из 1</span>
+        </div>
 
+        <div class="backgroundDescription"><p id="backgroundDescription">Смоленский рынок XIX века</p></div>
+        <div class="back-to-start">
+            <a class="btn btn-lg btn-secondary" href="index.html">Вернуться на начальный экран</a>
+        </div>
+
+    </div>
 </div>
 <script src="js/foregroundClick.js"></script>
 <script src="js/buttons.js"></script>
