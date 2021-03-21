@@ -13,10 +13,14 @@ let numberAllPic = 0;
 let currentPic = 1;
 let pictures = []
 
-fetch('data.json').then(res => res.json()).then(json => {
-    pictures = json;
-    numberAllPic = json.length
-})
+window.onload = () => {
+    fetch('data.json').then(res => res.json()).then(json => {
+        pictures = json;
+        numberAllPic = json.length
+        changePicProperty(currentPic)
+        resetProgress()
+    })
+}
 
 const btnNextHandler = () => {
     if (currentPic >= numberAllPic) window.location.href = 'final.html'
