@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/loader.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Игровое web-приложение по истории России "Найдите лишнее"</title>
@@ -11,11 +12,20 @@
 <div class="container_main">
 
     <div class="background">
+        <div class="loader" id="loader">
+            <p>Идет загрузка сцены, пожалуйста подождите</p>
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <img src="" id="backgroundIMG" alt="">
         <div id="btnPrev"></div>
         <div id="btnNext"></div>
         <div class="foreground" id="foreground"><img src="" id="foregroundIMG" alt=""></div>
-        <div class="foreground2" id="foreground2"><img src="" id="foregroundIMG2" alt=""></div>
+        <div class="foreground" id="foreground2"><img src="" id="foregroundIMG2" alt=""></div>
     </div>
 
     <div class="score_wrapper">
@@ -31,12 +41,8 @@
 
     </div>
 </div>
-<footer class="footer">
-    <div class="container">
-        <span class="text-muted">Alexei Sergei Inc.</span>
-    </div>
-</footer>
-<script src="js/foregroundClick.js"></script>
+<script src="js/onLoad.js"></script>
 <script src="js/render.js"></script>
+<script src="js/foregroundClick.js"></script>
 </body>
 </html>

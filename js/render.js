@@ -1,3 +1,5 @@
+const loader = document.getElementById('loader')
+
 const btnNext = document.getElementById('btnNext')
 const btnPrev = document.getElementById('btnPrev')
 
@@ -8,22 +10,13 @@ const foregroundIMG2 = document.getElementById('foregroundIMG2')
 const backgroundDescription = document.getElementById('backgroundDescription')
 const currentSlide = document.getElementById('currentSlide')
 
-let numberAllPic = 0;
+let countScenes = 0;
 
 let currentPic = 1;
 let pictures = []
 
-window.onload = () => {
-    fetch('data.json').then(res => res.json()).then(json => {
-        pictures = json;
-        numberAllPic = json.length
-        changePicProperty(currentPic)
-        resetProgress()
-    })
-}
-
 const btnNextHandler = () => {
-    if (currentPic >= numberAllPic) window.location.href = 'final.html'
+    if (currentPic >= countScenes) window.location.href = 'final.html'
     if (findedItems < pictures[currentPic - 1].imagesCount) return
 
     currentPic++
@@ -43,15 +36,10 @@ btnNext.addEventListener('click', btnNextHandler)
 
 btnPrev.addEventListener('click', btnPrevHandler)
 
-
 const rerenderPic = () => {
     enableDisablePic('hidden')
-
+    loading('visible')
     changePicProperty(currentPic)
-
-    setTimeout(() => {
-        enableDisablePic('visible')
-    }, 100)
 }
 
 const enableDisablePic = (visibility) => {
@@ -94,6 +82,10 @@ const changePicProperty = (current) => {
     } else {
         foregroundIMG2.src = ''
     }
+}
+
+const loading = (visibility) => {
+    loader.style.visibility = visibility
 }
 
 const resetProgress = () => {
